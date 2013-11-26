@@ -1,0 +1,17 @@
+<h1>Editing Post #<%= @post.id %></h1>
+
+<%= form_tag(post_url(@post), method: 'patch') do %>
+  <div>
+    <%= label_tag :name %><br />
+    <%= text_field_tag :name, @post.name %>
+  </div>
+
+  <div>
+    <%= label_tag :content %><br />
+    <%= text_area_tag :content, @post.content %>
+  </div>
+
+  <div>
+    <%= submit_tag "Update Post" %>
+  </div>
+<% end %>
